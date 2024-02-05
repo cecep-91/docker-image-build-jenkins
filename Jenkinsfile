@@ -1,7 +1,7 @@
 pipeline {
     environment {
     registry = "ikubaru/mynginx"
-    registryCredential = 'ikubaru:Root1234$'
+    registryCredential = 'ikubaru/******'
     dockerImage = ''
     }
 

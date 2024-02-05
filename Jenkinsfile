@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Cloning our Git') {
             steps {
-                git 'https://github.com/cecep-91/docker-image-build-jenkins.git'
+                git branch: 'main', url: 'https://github.com/cecep-91/docker-image-build-jenkins.git'
             }
         }
         stage('Building our image') {

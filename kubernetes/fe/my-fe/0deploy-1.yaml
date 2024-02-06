@@ -8,7 +8,7 @@ spec:
     metadata:
     spec:
       containers:
-      - name: nginx_image
+      - name: nginx
         image: nginx
         imagePullPolicy: Always
 

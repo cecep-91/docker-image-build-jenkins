@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                     withKubeConfig(credentialsId: 'kubeconfig') {
-                        sh "sed "s/mynginx:6/mynginx:${BUILD_NUMBER}/g" kubernetes/deployment.yaml"
+                        sh 'sed "s/mynginx:6/mynginx:${BUILD_NUMBER}/g" kubernetes/deployment.yaml'
                         sh "cat kubernetes/deployment.yaml"
                         sh "kubectl apply -f kubernetes/deployment.yaml"
                     }

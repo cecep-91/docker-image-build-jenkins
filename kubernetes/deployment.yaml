@@ -16,7 +16,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: ikubaru/mynginx:latest
+      - image: ikubaru/mynginx:6
         imagePullPolicy: Always
         name: nginx
         resources:

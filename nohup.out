@@ -1,0 +1,6 @@
+Hspell: can't open /usr/share/hspell/hebrew.wgz.sizes.
+kf.sonnet.clients.hspell: HSpellDict::HSpellDict: Init failed
+inotify_add_watch(/var/lib/samba/usershares) failed: (Permission denied)
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/git/docker-image-build-jenkins/.Jenkinsfile.kate-swp")
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/git/docker-image-build-jenkins/.Jenkinsfile.kate-swp")
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/git/docker-image-build-jenkins/.Jenkinsfile.kate-swp")

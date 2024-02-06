@@ -18,7 +18,7 @@ spec:
       containers:
       - image: ikubaru/mynginx:latest
         imagePullPolicy: Always
-        name: nginx_image
+        name: nginx
         resources:
           limits:
             cpu: "1"

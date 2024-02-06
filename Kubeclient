@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        KUBE_CONFIG = credentials('config')
+        KUBE_CONFIG = credentials('kubeconfig')
         NAMESPACE = 'jenkins'
     }
 
@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    withKubeConfig(credentialsId: 'config') {
+                    withKubeConfig(credentialsId: 'kubeconfig') {
                         sh "kubectl apply -f kubernetes/deployment.yaml"
                     }
                 }

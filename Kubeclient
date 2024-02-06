@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    
+    environment {
+        KUBE_CONFIG = credentials('config')
+        NAMESPACE = 'jenkins'
+    }
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git branch: 'main',url: 'https://github.com/cecep-91/docker-image-build-jenkins.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'docker build -t ikubaru/mynginx:latest .'
+                sh 'docker push ikubaru/mynginx:latest'
+            }
+        }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                script {
+                    withKubeConfig(credentialsId: 'config') {
+                        sh "kubectl apply -f kubernetes/deployment.yaml"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,11 +5,34 @@ pipeline {
     }
   } 
   stages {
+
+        stage('Start Agent') {
+            agent {
+                kubernetes {
+                    cloud 'kubernetes-cloud'
+                    inheritFrom 'kubernetes-cloud'
+                    containerTemplate {
+                        name 'jnlp'
+                        image 'jenkins/inbound-agent:latest'
+                        ttyEnabled true
+                        command '/bin/sh'
+                        args '-c cat'
+                    }
+                }
+            }
+            steps {
+                script {
+                    echo 'Waiting for agent to connect...'
+                }
+            }
+        }
+
     stage('Clone repository') {
       steps {
         git branch: 'main',url: 'https://github.com/cecep-91/docker-image-build-jenkins.git'
       }
     }
+
     stage('Build and push Docker image') {
       steps {
         sh 'docker build -t ikubaru/mynginx:latest .'

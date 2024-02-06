@@ -1,0 +1,8 @@
+resources:
+- my-fe/
+
+Namespace: dev-myproject
+labels:
+  - pairs:
+     app: nginx
+    includeSelectors: true

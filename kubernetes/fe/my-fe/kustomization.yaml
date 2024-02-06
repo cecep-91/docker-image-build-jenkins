@@ -1,0 +1,3 @@
+resources:
+- ./0deploy-1.yaml
+- ./0service.yaml

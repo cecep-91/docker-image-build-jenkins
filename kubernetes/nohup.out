@@ -1,0 +1,9 @@
+Hspell: can't open /usr/share/hspell/hebrew.wgz.sizes.
+kf.sonnet.clients.hspell: HSpellDict::HSpellDict: Init failed
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/kubernetes/nginx/fe/my-fe/.0deploy-1.yaml.kate-swp")
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/kubernetes/nginx/fe/my-fe/.0service.yaml.kate-swp")
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/kubernetes/nginx/.kustomization.yaml.kate-swp")
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/kubernetes/nginx/fe/my-fe/.0service.yaml.kate-swp")
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/kubernetes/nginx/.kustomization.yaml.kate-swp")
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/kubernetes/nginx/.kustomization.yaml.kate-swp")
+kf.kio.widgets.kdirmodel: No node found for item that was just removed: QUrl("file:///home/ikuu/kubernetes/nginx/.kustomization.yaml.kate-swp")

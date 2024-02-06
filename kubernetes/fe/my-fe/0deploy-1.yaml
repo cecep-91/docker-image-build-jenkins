@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 1
+  template:
+    metadata:
+    spec:
+      containers:
+      - name: nginx_image
+        image: nginx
+        imagePullPolicy: Always
+
+        ###RESOURCE###
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "1"
+          requests:
+            cpu: "200m"
+            memory: "250Mi"
+
+      imagePullSecrets:
+        - name: harbor-registry-secret

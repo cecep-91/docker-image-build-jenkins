@@ -1,22 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mynginx
-  namespace: jenkins
+  labels:
+    app: nginx
+  name: nginx
+  namespace: dev-myproject
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
   template:
     metadata:
+      labels:
+        app: nginx
     spec:
       containers:
-      - name: mynginx
-        image: ikubaru/mynginx:latest
+      - image: ikubaru/mynginx:latest
         imagePullPolicy: Always
-
+        name: nginx_image
         resources:
           limits:
-            memory: "500Mi"
             cpu: "1"
+            memory: 500Mi
           requests:
-            cpu: "200m"
-            memory: "250Mi"
+            cpu: 200m
+            memory: 250Mi
